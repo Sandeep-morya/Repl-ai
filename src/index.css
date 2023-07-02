@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.smooth {
+	@apply transition duration-700;
+}
+
+.search-bar-icon {
+	@apply active:text-blue-500 px-3 py-2 text-xl;
+}
+
+.hide-scrollbar {
+	scrollbar-width: "none";
+	-ms-overflow-style: "none";
+}
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.listening {
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		color: white;
+		transform: scale(1);
+	}
+	50% {
+		color: red;
+		transform: scale(1.2);
+	}
+	100% {
+		color: white;
+		transform: scale(1);
+	}
+}
